@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Създай собствен цитат</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Създай собствен цитат</h1>
+    <button id="theme-toggle">🌙 Превключи тема</button>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Начало</a></li>
+      <li><a href="about.html">За нас</a></li>
+      <li><a href="quotes.html">Моите цитати</a></li>
+      <li><a href="customize.html">Създай цитат</a></li>
+      <li><a href="visual-quotes.html">Визуални цитати</a></li>
+      <li><a href="contact.html">Контакти</a></li>
+  </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Плъзнете думата, която искате да включите в своя цитат</h2>
+      <div id="words">
+        <span class="draggable-word" draggable="true">успех</span>
+        <span class="draggable-word" draggable="true">любов</span>
+        <span class="draggable-word" draggable="true">смях</span>
+        <span class="draggable-word" draggable="true">мечта</span>
+        <span class="draggable-word" draggable="true">път</span>
+        <span class="draggable-word" draggable="true">вдъхновение</span>
+      </div>
+
+      <div class="drop-zone" id="drop-area">
+        <p>Пусни думите тук</p>
+      </div>
+
+      <button id="generate-custom">Генерирай цитат</button>
+      <button id="clear-words">Изчисти думите</button>
+
+      <div id="custom-quote" style="margin-top: 2rem; font-style: italic; font-size: 1.2rem;"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 • Разработено от: <strong>Magitta</strong></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

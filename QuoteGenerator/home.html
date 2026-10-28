@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персонализирани цитати</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Персонализирани цитати</h1>
+        <p>Получете вдъхновение според вашите предпочитания!</p>
+        <button id="theme-toggle">🌙 Превключи тема</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Начало</a></li>
+            <li><a href="about.html">За нас</a></li>
+            <li><a href="quotes.html">Моите цитати</a></li>
+            <li><a href="customize.html">Създай цитат</a></li>
+            <li><a href="visual-quotes.html">Визуални цитати</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="form-section">
+            <h2>Попълнете вашите предпочитания</h2>
+            <form id="quote-form">
+                <label for="theme">Изберете тема:</label>
+                <select id="theme">
+                    <option value="motivation">Мотивация</option>
+                    <option value="humor">Хумор</option>
+                    <option value="romance">Романтика</option>
+                    <option value="melancholy">Меланхолия</option>
+                </select>
+                <button type="button" id="generate-button">Генерирай цитат</button>
+            </form>
+        </section>
+
+        <section id="quotes-section">
+            <h2>Вашите цитати</h2>
+            <ul id="quote-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 • Разработено от: <strong>Magitta</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

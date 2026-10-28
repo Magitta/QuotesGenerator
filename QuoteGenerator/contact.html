@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .social-icons a img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a img:hover {
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        grid-template-columns: 1fr;
+      }
+      .extra-images {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Свържи се с нас!</h1>
+    <button id="theme-toggle">🌙 Превключи тема</button>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Начало</a></li>
+      <li><a href="about.html">За нас</a></li>
+      <li><a href="quotes.html">Моите цитати</a></li>
+      <li><a href="customize.html">Създай цитат</a></li>
+      <li><a href="visual-quotes.html">Визуални цитати</a></li>
+      <li><a href="contact.html">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Форма за контакт</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Вашето име" required>
+        <input type="email" id="email" placeholder="Вашият имейл" required>
+        <textarea id="message" placeholder="Вашето съобщение" rows="5" required></textarea>
+        <button type="submit">Изпрати</button>
+      </form>
+    </section>
+
+    <section class="social-icons">
+      <a href="https://facebook.com" target="_blank">
+        <img src="gallery/facebook.jpg" alt="Facebook">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="gallery/instagram.jpg" alt="Instagram">
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <img src="gallery/twitter.jpg" alt="Twitter">
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 • Разработено от: <strong>Magitta</strong></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

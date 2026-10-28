@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цитати като изображения</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #image-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    #image-container img {
+      max-width: 100%;
+      max-height: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: opacity 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    #image-container img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    #generate-image-button {
+      margin-top: 1.5rem;
+    }
+    #download-button {
+      margin-top: 1rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Генерирай свой визуален цитат</h1>
+    <button id="theme-toggle">🌙 Превключи тема</button>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Начало</a></li>
+      <li><a href="about.html">За нас</a></li>
+      <li><a href="quotes.html">Моите цитати</a></li>
+      <li><a href="customize.html">Създай цитат</a></li>
+      <li><a href="visual-quotes.html">Визуални цитати</a></li>
+      <li><a href="contact.html">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Галерия с визуални цитати</h2>
+      <div id="image-container">
+        <div id="placeholder" style="padding: 50px; font-size: 1.2rem; font-style: italic; color: #666;">
+          Цъкни бутона, за да видиш вдъхновяващ цитат! ✨
+        </div>
+        <img id="quote-image" style="display: none;" alt="Цитат като изображение">
+        <div id="download-button">
+          <a id="download-link" href="" download="quote.png">
+            <button>⬇️ Изтегли изображението</button>
+          </a>
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <button id="generate-image-button">Генерирай нова снимка с цитат</button>    
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 • Разработено от: <strong>Magitta</strong></p>
+  </footer>
+
+  <script>
+    // Превключване на темата
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-theme");
+    }
+    const themeBtn = document.getElementById("theme-toggle");
+    if (themeBtn) {
+      themeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-theme");
+      });
+    }
+
+    // Генериране на изображенията ми
+    const images = [
+      "gallery/Quote1.png",
+      "gallery/Quote2.png",
+      "gallery/Quote3.png",
+      "gallery/Quote4.png",
+      "gallery/Quote5.png",
+      "gallery/Quote6.png",
+      "gallery/Quote7.png",
+      "gallery/Quote8.png",
+      "gallery/Quote9.png",
+      "gallery/Quote10.png",
+      "gallery/Quote11.png",
+      "gallery/Quote12.png",
+      "gallery/Quote13.png",
+      "gallery/Quote14.png",
+      "gallery/Quote15.png",
+      "gallery/Quote16.png",
+      "gallery/Quote17.png",
+      "gallery/Quote18.png",
+      "gallery/Quote19.png",
+      "gallery/Quote20.png",
+    ];
+    let current = 0;
+    const img = document.getElementById("quote-image");
+    const placeholder = document.getElementById("placeholder");
+    const downloadBtn = document.getElementById("download-button");
+    const downloadLink = document.getElementById("download-link");
+
+    document.getElementById("generate-image-button").addEventListener("click", () => {
+      current = (current + 1) % images.length;
+      placeholder.style.display = "none";
+      img.style.display = "inline-block";
+      img.style.opacity = 0;
+
+      setTimeout(() => {
+        img.src = images[current];
+        downloadLink.href = images[current]; 
+        downloadBtn.style.display = "block";
+        img.style.opacity = 1;
+      }, 300);
+    });
+  </script>
+</body>
+</html>
